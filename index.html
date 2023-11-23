@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop Invoice</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="box box-1">
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName">
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+          </div>
+          <div class="form-group">
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode">
+          </div>
+          <div class="form-group">
+            <table>
+              <thead>
+                <tr>
+                  <th>Training / Workshop</th>
+                  <th>No. of Students</th>
+                  <th>No. of Professionals</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="title">Mobile App Development</td>
+                  <td><input type="number" id="studentMAD"></td>
+                  <td><input type="number" id="profMAD"></td>
+                </tr>
+                <tr>
+                  <td class="title">Creative Web Design</td>
+                  <td><input type="number" id="studentCWD"></td>
+                  <td><input type="number" id="profCWD"></td>
+                </tr>
+                <tr>
+                  <td class="title">R Programming with Data Sciences</td>
+                  <td><input type="number" id="studentR"></td>
+                  <td><input type="number" id="profR"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-group">
+            <label>Venue:</label>
+            <div class="radio-group">
+              <label for="outside">Outside</label>
+              <input type="radio" id="outside" name="venue" value="outside">
+              <label for="trainingCenter">Training Center</label>
+              <input type="radio" id="trainingCenter" name="venue" value="trainingCenter">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Inclusion:</label>
+            <div class="checkbox-group">
+              <label for="sourceCode">Source Code</label>
+              <input type="checkbox" id="sourceCode" name="inclusion" value="sourceCode">
+              <label for="certificates">Certificates</label>
+              <input type="checkbox" id="certificates" name="inclusion" value="certificates">
+              <label for="snacks">Snacks</label>
+              <input type="checkbox" id="snacks" name="inclusion" value="snacks">
+            </div>
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn-process">Process Order</button>
+            <button type="reset" class="btn-clear">Clear Order Form</button>
+          </div>
+        </form>
+      </div>
+      <div class="box box-2">
+        <h1>Invoice</h1>
+        <div id="invoiceOutput"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
